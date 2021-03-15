@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7点循环</title>
+    <style>
+
+        /*@font-face {
+        font-family:Gabriola;
+        src:url('../font/Gabriola.ttf');
+        }*/
+
+        div#container {
+        display:flex;
+        width:100%;
+        height:310px;
+        justify-content:center;
+        align-items:center;
+        }
+
+        div#container div {
+        /*text-align:center;
+        font-size:30px;
+        line-height:120px;*/
+        margin:0px 5px;
+        width:120px;
+        height:120px;
+        background-color:#000;
+        border-radius:50%;
+        box-shadow:0px 0px 5px 5px #B4B4B4;
+        cursor:pointer;
+        }
+
+        p#courseSum{
+        float:left;
+        width:140px;
+        font-size:20px;
+        font-family:楷体;
+        }
+
+        div.checkPoint {
+        position:relative;
+        height:60px;
+        font-size:42px;
+        line-height:60px;
+        text-align:center;
+        font-family:楷体;
+        background-color:#FFA12A;
+        border-radius:10px;
+        border:3px solid #FF3F14;
+        transition:all 0.5s ease;
+        }
+
+        div.checkPoint:hover div#drop_down_box {
+        top:100%;
+        }
+
+        div.checkPoint p {
+        margin-block-start:0px;
+        margin-block-end:0px;
+        position:absolute;
+        top:0px;
+        left:8px;
+        font-size:42px;
+        line-height:60px;
+        font-family:楷体;
+        }
+
+        div.checkPoint div#drop_down_box {
+        width:100%;
+        border-radius:10px;
+        border:3px solid #FF3F14;
+        position:absolute;
+        top:-3px;
+        left:-3px;
+        z-index:-1;
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        height:60px;
+        }
+
+        div#drop_down_box > div {
+        margin:0 20px;
+        border-radius:50%;
+        text-align:center;
+        width:40px;
+        height:40px;
+        font-size:28px;
+        line-height:40px;
+        font-family:楷体;
+        border:3px ridge #FFA12A;
+        background-color:#FFF;
+        }
+
+        p#button {
+        text-align:center;
+        }
+
+        button {font-size:30px;
+        line-height:40px;
+        }
+
+    </style>
+    <script src="../script/sevenPointCircle.js"></script>
+</head>
+<body>
+<!-- 记录关卡的 -->
+<div class="checkPoint">1
+    <p>关卡</p>
+    <!--
+    <div id="drop_down_box">
+        <div class="checkPoint">1</div>
+        <div class="checkPoint">2</div>
+    </div>
+    -->
+</div>
+<!-- 记录所用的次数 -->
+<p id="courseSum">你用的次数:<span id="log">0</span></p>
+
+<!-- 主体部分,有1个flex容器和7个flex项目 -->
+<div id="container">
+    <div class="black1" id="0"></div>
+    <div class="black1" id="1"></div>
+    <div class="black1" id="2"></div>
+    <div class="black1" id="3"></div>
+    <div class="black1" id="4"></div>
+    <div class="black1" id="5"></div>
+    <div class="black1" id="6"></div>
+</div>
+<hr/>
+<p id="button">
+    <button>上一步</button>
+    <button>退出</button>
+</p>
+</body>
+</html>
